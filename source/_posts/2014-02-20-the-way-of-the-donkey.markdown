@@ -1,0 +1,22 @@
+---
+layout: post
+title: "The Way of the Donkey"
+date: 2014-02-20 14:42:20 -0400
+comments: false
+categories: "Flatiron&nbspSchool"
+---
+Almost everyday my dad and I have a routine where we exchange headlines and excerpts of articles from the Times.  Mostly we’ve read all the same articles and we butt heads about whatever the implications are.  But that day in November he had told me about the possible extinction of a breed of donkeys native to mountains of Portugal and Spain.  “No one uses donkeys anymore; they all have tractors. And everyone is emigrating to the cities.” 
+
+He went on to say to tell me how EU subsidizes farmers to keep their donkeys but that now the farmers, who still pay more to care for their donkeys than they receive in subsidies, are retiring and can’t care for them much longer.  It seems that the donkeys are inevitably turning from a relic into a memory of a pre-digital age.  I felt the same way.
+
+For months prior I had toyed with the idea of going to grad-school.  I was directionless.  I had toyed with the idea of becoming a history professor; the idea of spending my days teaching and exploring my esoteric interests seemed like an amazing direction to take my life.  However, I had worked with people who had doctorates and masters in related fields, and they didn’t seem to be having the life I had expected them to live.  Not that they weren’t happy, but it was clear that life in academia wasn’t what I had thought it to be.  I was worried my arcane interests would lead me down the road of the donkey.  The digital age is in full swing and only accelerating, I didn’t want to further isolate myself by focusing on the past while the present moved on.
+
+The further I advanced in the application process the more I wanted to stop, but I didn’t know where to go instead.  I had toyed with the idea of several other fields, all of which I had little to no experience in.  Finally one day I decided to delve deeper into my curiosity about coding.  I was always intimidated by it.  I have never done more than play around with free online tutorials with HTML and CSS.  During them I had been convinced I was capable of doing this.  Then I’d try to make my own website, and I’d suddenly feel that confidence disappear.  “I can’t do this,” I’d think.
+
+I had always had the misconception that’s coding was somehow beyond me, somehow otherworldly.  To program was to speak computer.  Then I heard about the Flatiron School and Ruby.  I school to teaching programming to the non-programmers in a language so semantic anyone who had the passion to learn and the patience to teach it to themselves could pick up.  I read everything I could find about the school and got in touch with an alumnus.  I visited the school’s meet ups every Thursday night for weeks by the time I decided to apply.  The school wasn’t selling snake oil, it was giving it’s students the environment and programming expertise to learn something practical and doable.  I see it and feel it.
+
+By that time I had delved into Ruby with Chris Pine’s Learn to Program, and it was clear that while I was having my computer run basic programs I wasn’t speaking computer.  Ruby was created to be a language of description as well as expression, meaning it’s actions were powerful but clear to any person who read it.  It’s syntax and keywords sat on my screen colored neon pink and blue with the strings, words wrapped in quotation marks, a pale yellow.  These contrasted with the slate grey of my text editor Sublime Text 2, and I felt like I was really doing something with myself.
+
+I didn’t know everything about Ruby, but bits and pieces of it were beginning to make sense to me.  It was slow going, but it wasn’t a dense cluster of indecipherable characters that I had imagined only people with super human thinking could translate and tabulate into meaning.
+
+A few weeks later I had found out I was accepted into the Flatiron School.  I was ecstatic.  Soon I thought the wall I had hit in teaching myself to code would be become easier to climb over, as teachers would guide me in doing so.  It has only been two weeks since I began, and I am still amazed at how I much I had underestimated just how much the school could teach me in such a short amount of time.  I no longer feel like I could be one of those donkeys, surviving in isolation while the world moved on.

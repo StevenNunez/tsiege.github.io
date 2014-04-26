@@ -1,2 +1,36 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+#main-nav> ul li {
+  margin-left: 0px;
+  padding-bottom: 7px;
+  color: #666 !important;
+  line-height: 50px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .5s ease-in-out;
+  -webkit-transition: border-color .5s ease-in-out;
+  -moz-transition: border-color .5s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+#main-nav> ul li:hover {
+  color: #666 !important;
+  border-bottom-color: #07CC95;
+}
+
+#main-nav> ul li a {
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto !important;
+  color: #666 !important;
+}
+
+#main-nav> ul li a:hover {
+  color: #666 !important;
+}
+
+#main-nav>ul>li>a:after {
+  padding: 0 !important;
+}
