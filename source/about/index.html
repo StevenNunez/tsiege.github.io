@@ -2,20 +2,28 @@
 layout: default
 title: About Me
 ---
+<div class="about-me">
+  <div class="about-me-bio">
+    <br>
+    <h2 class="about-me-headers title">A Little About Me</h2>
+    <hr>
+    <br>
+    <div class="entry-content">
+      <p>
+        Before learning to code, I worked as a field assistant for archaeologists. But after a while I got tired of digging holes and looking for the past. Having finished the Ruby course at the Flatiron School, I'm now looking forward to my future in programming. Beyond loving Ruby, I've also developed a fondness for JavaScript.
+      </p>
+      <br>
+      <p>
+        Besides coding I like history, biking, and cooking.  Making salsa and guac from scratch are my specialties.  I also love Cuban food and am willing to try any dish once.
+      </p>
+    </div>
+  </div>
 
-
-<div class="social aside-module grid__item one-whole lap-one-half">
-  <ul class="unstyled">
-    {% if site.social.adn %}<li><a class="adn" rel="me" href="{{ site.social.adn }}"><i class="fa fa-adn"></i> App.net</a></li>{% endif %}
-    {% if site.social.dribbble %}<li><a class="dribbble" href="{{ site.social.dribbble }}"><i class="fa fa-dribbble"></i> Dribbble</a></li>{% endif %}
-    {% if site.social.github %}<li><a class="github" href="{{ site.social.github }}"><i class="fa fa-github-alt"></i> Github</a></li>{% endif %}
-    {% if site.social.facebook %}<li><a class="facebook" href="{{ site.social.facebook }}"><i class="fa fa-facebook-sign"></i> Facebook</a></li>{% endif %}
-    {% if site.social.googleplus %}<li><a class="gplus" href="{{ site.social.googleplus }}"><i class="fa fa-google-plus-sign"></i> Google+</a></li>{% endif %}
-    {% if site.social.linkedin %}<li><a class="linkedin" href="{{ site.social.linkedin }}"><i class="fa fa-linkedin"></i> LinkedIn</a></li>{% endif %}
-    {% if site.social.pinterest %}<li><a class="pinterest" href="{{ site.social.pinterest }}"><i class="fa fa-pinterest"></i> Pinterest</a></li>{% endif %}
-    {% if site.social.stackoverflow %}<li><a class="stackoverflow" href="{{ site.social.stackoverflow }}"><i class="fa fa-stack-overflow"></i> StackOverflow</a></li>{% endif %}
-    {% if site.social.twitter %}<li><a class="twitter" href="{{ site.social.twitter }}"><i class="fa fa-twitter"></i> Twitter</a></li>{% endif %}
-    {% if site.social.youtube %}<li><a class="youtube" href="{{ site.social.youtube }}"><i class="fa fa-youtube"></i> YouTube</a></li>{% endif %}
-  </ul>
+  <div id="profile-links">
+    <br>
+    <h3 class="about-me-headers">See what else I do on the Internet!</h3>
+    <hr>
+    <br>
+    {% include about_sections/my_profiles.html %}
+  </div>
 </div>
-
