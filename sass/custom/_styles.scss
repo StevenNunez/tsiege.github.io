@@ -42,17 +42,30 @@
 
 
 // misc. styling
+
+#header h1 a {
+  color: #07CC95;
+}
+
+#header h1 a:hover {
+  color: #34aF7D;
+}
+
 .about-me {
   margin-top: 15px;
 }
 
 .about-me-bio {
   float: left;
-  width: 60%;
+  width: 95%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #profile-links {
-  float: right;
+  position: relative;
+  top: 10px;
+  padding-left: 10px;
 }
 
 .social a.rss:hover::before {
@@ -70,6 +83,7 @@ hr {
   border: 0;
   border-bottom: 1px solid #ddd;
   width: 100px;
+  margin-bottom: 10px;
 }
 
 article h2.title a {
@@ -79,6 +93,21 @@ article h2.title a {
 article h2.title a:hover {
   color: #07CC95;
 }
+
+@media only screen and (min-width: 774px) {
+  .about-me-bio {
+    float: left;
+    width: 60%;
+  }
+  #profile-links {
+    float: right;
+    top: -17px;
+  }
+  li {
+    width: 103%;
+  }
+}
+
 
 
 // footer styling to stay at the bottom of the screen
@@ -96,6 +125,8 @@ article h2.title a:hover {
 }
 
 #wrapper {
+  width: 94%;
+  margin: auto;
   min-height:100%;
   position:relative;
 }
@@ -108,6 +139,10 @@ html, body {
 
 footer {
   border-top: 1px solid #ddd;
+}
+
+ul {
+  list-style: none;
 }
 
 
@@ -383,6 +418,7 @@ $navigation-color:  $link-color;
     color: #222;
     display: inline-block;
     font-size: 0.9em;
+    margin-left: 10px;
     margin-bottom: 7px;
     padding: 1em;
     position: relative;
