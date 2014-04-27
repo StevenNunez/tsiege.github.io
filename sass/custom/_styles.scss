@@ -34,3 +34,338 @@
 #main-nav>ul>li>a:after {
   padding: 0 !important;
 }
+
+
+
+// this is for the social icon
+$use-grids:         true;
+$site-width:        1100px;
+$responsive:        true;
+$use-gridfix:       true;
+
+// Fonts & Font Families
+$serif: Georgia, 'Times New Roman', Times, serif !default;
+$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// Grays
+// -------------------------
+$black:             #000 !default;
+$grayDarker:        #222 !default;
+$grayDark:          #333 !default;
+$gray:              #555 !default;
+$grayLight:         #999 !default;
+$grayLighter:       #eee !default;
+$white:             #fff !default;
+
+// Accent colors
+// -------------------------
+$blue:              #049cdb !default;
+$blueDark:          #0064cd !default;
+$green:             #46a546 !default;
+$red:               #9d261d !default;
+$yellow:            #ffc40d !default;
+$orange:            #f89406 !default;
+$pink:              #c3325f !default;
+$purple:            #7a43b6 !default;
+
+// Social network colors
+// Organised in a key-value pair list for dynamic SASS
+// Can be infinitely extended by adding more as required
+// -------------------------
+$sites: 
+  adn #4A484C,
+  dribbble #EA4C89,
+  facebook #3B5998,
+  github #333333,
+  gplus #db4a39,
+  linkedin #4875b4,
+  pinterest #CC2127,
+  stackoverflow #FE7A15,
+  twitter #00a0d1,
+  youtube #CC181E;
+
+// Site footer
+// -------------------------
+$footer-height: 100px;
+
+// Site colors
+// -------------------------
+$primary-color:     $blue;
+$secondary-color:   $green;
+// -------------------------
+$site-background:   #F5F5F5;
+$header-background: $white;
+$footer-background: $header-background;
+$text-color:        $grayDarker;
+$title-color:       $primary-color;
+$link-color:        $primary-color;
+$button-color:      $primary-color;
+$button-text:       $white;
+$navigation-color:  $link-color;
+
+
+@mixin content-columns($columnCount, $columnGap: $gridGutterWidth) {
+  -webkit-column-count: $columnCount;
+     -moz-column-count: $columnCount;
+          column-count: $columnCount;
+  -webkit-column-gap: $columnGap;
+     -moz-column-gap: $columnGap;
+          column-gap: $columnGap;
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+       -o-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin gradient-horizontal($startColor: $button-color, $endColor: darken($button-color, 5%)) {
+  background-color: $endColor;
+  background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to right, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=1); // IE9 and down
+}
+
+@mixin gradient-vertical($startColor: $button-color, $endColor: darken($button-color, 5%)) {
+  background-color: mix($startColor, $endColor, 60%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+}
+
+.aside-module {
+  @media only screen and (min-width: 1000px){
+    &:first-child {
+      .title {margin-top: 0;}
+    }
+  }
+  .title {
+    border-bottom: 1px solid $color-main;
+    color: $color-gray01;
+    margin: 1em 0 0.5em;
+    padding-bottom: 5px;
+
+    .btn {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      padding: 5px 10px;
+      text-decoration: none;
+    }
+  }
+
+  .loading {
+    display: block;
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+.social{
+  float: left;
+  margin-right: 15px;
+  @media screen and (max-width: 1040px){
+    float: none;
+    margin-right: 0;
+    a:last-of-type{
+      margin-right: 0;
+    }
+  }
+  a{
+    @include border-radius(50%);
+    @include inline-block;
+    margin-right: 15px;
+    opacity: 0.5;
+    @include square(28px);
+    @include transition(0.3s);
+    &:hover{
+      opacity: 1;
+    }
+    &.facebook{
+      background: center no-repeat #3B5998;
+      border: 1px solid #3B5998;
+      &:hover{
+        border: 1px solid darken(#3B5998, 10%);
+      }
+    }
+    &.google{
+      background: center no-repeat #C83D20;
+      border: 1px solid #C83D20;
+      &:hover{
+        border: 1px solid darken(#C83D20, 10%);
+      }
+    }
+    &.twitter{
+      color: #006091 !important;
+      background:  center no-repeat #55CFF8;
+      border: 1px solid #55CFF8;
+      &:hover{
+        border: 1px solid darken(#55CFF8, 10%);
+      }
+    }
+    &.github{
+      background: center no-repeat rgb(175,182,202);
+      border: 1px solid rgb(175,182,202);
+      &:hover{
+        border: 1px solid darken(rgb(175,182,202), 10%);
+      }
+    }
+    &.coderwall{
+      background: center no-repeat rgb(58,114,159);
+      border: 1px solid rgb(58,114,159);
+      &:hover{
+        border: 1px solid darken(rgb(58,114,159), 10%);
+      }
+    }
+    &.pinboard{
+      background: center no-repeat rgb(0,102,200);
+      border: 1px solid rgb(58,114,159);
+      &:hover{
+        border: 1px solid darken(rgb(0,102,255), 10%);
+      }
+    }
+    &.linkedin{
+      color: #78a5e4 !important;
+      background: center no-repeat #005A87;
+      border: 1px solid #005A87;
+      &:hover{
+        border: 1px solid darken(#005A87, 10%);
+      }
+    }
+    &.pinterest{
+      background: center no-repeat rgb(190,64,55);
+      border: 1px solid rgb(190,64,55);
+      &:hover{
+        border: 1px solid darken(rgb(190,64,55), 10%);
+      }
+    }
+    &.delicious{
+      background: center no-repeat rgb(50,113,203);
+      border: 1px solid rgb(50,113,203);
+      &:hover{
+        border: 1px solid darken(rgb(50,113,203), 10%);
+      }
+    }
+    &.rss{
+      background: ter no-repeat #ef7522;
+      border: 1px solid #ef7522;
+      &:hover{
+        border: 1px solid darken(#ef7522, 10%);
+      }
+    }
+    &.instagram{
+      background: center no-repeat rgb(64,110,149);
+      border: 1px solid rgb(64,110,149);
+      &:hover{
+        border: 1px solid darken(rgb(64,110,149), 10%);
+      }
+    }
+  }
+}
+
+
+.social {
+  ul {
+    @media only screen and (min-width: 1000px){
+      @include content-columns(2, 10px);
+    }
+  }
+
+  a {
+    @include box-sizing(border-box);
+    background-color: darken($site-background, 5%);
+    border: 1px solid darken($site-background, 10%);
+    border-radius: 4px;
+    color: #222;
+    display: inline-block;
+    font-size: 0.9em;
+    margin-bottom: 7px;
+    padding: 1em;
+    position: relative;
+    text-decoration: none;
+    width: 91%;
+    height: 42px;
+    z-index: 5;
+    @include transition(
+      box-shadow 200ms,
+      color 400ms,
+      transform 400ms
+    );
+
+    &:hover {
+      color: $white !important;
+      text-decoration: none;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+      z-index: 7;
+      &::before {
+        border: 1px solid #000;
+        height: 96%;
+        top: 0;
+        border-radius: 2px;
+        width: 99%;
+      }
+    }
+
+    &::before {
+      background-color: #222;
+      border-radius: 4px;
+      content: "";
+      height: 1px;
+      position: absolute;
+        top: 50%; left: 0%;
+      width: 0;
+      z-index: -1;
+      @include transition(
+        border 200ms,
+        height 200ms 200ms,
+        top 200ms 200ms,
+        width 200ms
+      );
+    }
+
+    i {
+      font-size: 2em;
+      line-height: 0.8em;
+      margin-right: 0.35em;
+    }
+
+    @each $kvp in $sites {
+      &.#{nth($kvp, 1)} {
+        color: nth($kvp, 2);
+        &::before {
+          background-color: nth($kvp, 2);
+          border-color: darken(nth($kvp, 2), 5%);
+        }
+      }
+    }
+
+  }
+}

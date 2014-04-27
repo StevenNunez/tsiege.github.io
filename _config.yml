@@ -98,3 +98,16 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+social:
+  title: # Defaults to "Follow me!" if not present
+  # adn: # App.net
+  # dribbble:
+  # facebook:
+  github: "https://github.com/TSiege"
+  # googleplus:
+  linkedin: "https://www.linkedin.com/in/tristantsiegel"
+  # pinterest:
+  stackoverflow: "http://stackoverflow.com/users/3023931/tsiege"
+  twitter: "https://twitter.com/ttsiege"
+  # youtube:
