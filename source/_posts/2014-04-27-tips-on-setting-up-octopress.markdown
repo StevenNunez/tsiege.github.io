@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tips on Setting Up Octopress"
+title: "Tips on Customizing Octopress"
 date: 2014-04-27 14:55:38 -0400
 comments: true
 categories: "Octopress Octopress&nbspThemes Font&nbspAwesome Octopress&nbspLayouts"
@@ -52,3 +52,13 @@ For almost anything else you'd want to do with Octopress you'll be in ```source/
 In ```_layouts/``` you'll be able to make your own if you want. These layouts often require partials from ```_inlcudes/```.  Once you finish making your own layout add ```layout: some_custom_layout``` to your page.
 
 For more of what you can do in ```source/``` check out http://octopress.org/docs/theme/template/
+
+### Getting a New Favicon
+<hr>
+Getting a new favicon for your blog isn't too hard; there are just several favicon.pngs floating around the octopress blog.  But the real favicon, or at least the one which is actually used by octopress is in the top level of ```source/```.  I simply deleted this favicon and replaced it with my own.  Next to make sure it is properly being required by the head of your blog's page.  In ```source/_includes/head.html``` is the line:
+``` html
+<link href="{{ root_url }}/favicon.ico" rel="shortcut icon">
+```
+Make sure the ```favicon.ico``` part is the exact same name as your favicon on the top level of ```source/``` and you should be good to go. 
+
+\- If you change the favicon and don't see it, try clearing your browser's cache in order to properly update the blog's styling.
