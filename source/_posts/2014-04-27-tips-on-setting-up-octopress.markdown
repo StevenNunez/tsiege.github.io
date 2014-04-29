@@ -12,7 +12,7 @@ Having had just made my own Octopress Blog, I can safely say there are some thin
 
 ### Getting a better theme.
 <hr>
-While Octopress is great it ain't too pretty.  After running ```rake setup_github_pages```, which sets up your url and the correct branch for your repo, is a good time to get a new theme.  [This](https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes) will help you find an awesome theme built specifically for Octopress all come with site previews as well as the necessary steps to using their theme. Here are the generic steps for your command line:
+While Octopress is great it ain't too pretty.  After running ```rake setup_github_pages```, which sets up your url and the correct branch for your repo, it is a good time to get a new theme.  [This](https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes) will help you find an awesome theme built specifically for Octopress all come with site previews as well as the necessary steps to using their theme. Here are the generic steps for your command line:
 ```
 $ cd octopress
 $ git clone GIT_URL .themes/THEME_NAME
@@ -22,9 +22,9 @@ $ rake generate
 
 ### Customizing your style sheets.
 <hr>
-Octopress can be a little confusing since it has many duplicate files and directories.  But all the changes to you'll need to make are going to be in ```sass/``` directory on the top level of Octopress.  In that directory will be a ```custom/``` dir with will be ```_styles.scss```.  That file is where all your complex custom css or sass will go.  If you want to change say, a default color your theme uses change that in the ```_color.css``` in the same ```custom/``` directory.
+Octopress can be a little confusing since it has many duplicate files and directories.  But all the changes you'll need to make are going to be in ```sass/``` directory on the top level of Octopress.  In that directory will be a ```custom/``` folder that contains ```_styles.scss``` file.  That file is where all your complex custom css or sass will go.  For example, if you want to change a default color that your theme uses, change its value in the ```_color.css``` file in the same ```custom/``` directory.
 
-The way Octopress works is that it will require ```sass/screen.scss```, which in turn requires partials on the top level of the ```sass/```, which those partials compile the styles of each other directory in ```sass/```.  The style sheets in ```custom/``` are compiled last and ```custom/_styles.scss``` is the last of last, letting its styling override all others.
+The way Octopress works is that it will require ```sass/screen.scss```, which in turn requires partials on the top level of the ```sass/``` directory, which those partials compile the styles of each other directory in ```sass/```.  The style sheets in ```custom/``` are compiled last and ```custom/_styles.scss``` is the last of last, letting its styling override all others.
 
 For more about customizing your style sheets see http://octopress.org/docs/theme/styles/
 
@@ -34,9 +34,9 @@ Skip this if Font Awesome works with your theme.
 
 Font Awesome lives up to its name, but getting it into your Octopress blog can be a pain, but luckily I've found a great [blog](http://infectiouscoding.com/blog/2013/09/04/add-font-awesome-to-octopress/) that helped. Here's the gist:<br>
 1) Download and unzip [Font Awesome](http://fortawesome.github.io/Font-Awesome/).<br>
-2) If you don't have a ```sass/font-awesome/``` folder then create one and move the ```scss/``` from the Font Awesome package you just downloaded into ```sass/font-awesome/```. This will create a dir tree that looks like ```sass/font-awesome/scss/```.<br>
+2) If you don't have a ```sass/font-awesome/``` folder then create one and move the ```scss/``` folder from the Font Awesome package you just downloaded into ```sass/font-awesome/```. This will create a dir tree that looks like ```sass/font-awesome/scss/```.<br>
 3) Finish up in ```sass/font-awesome/scss/``` by adding this line, ```@import "font-awesome/scss/font-awesome.scss"```, to ```screen.scss``` in the top level of ```sass/```.<br>
-4) Next move the ```font/``` from the Font Awesome package to ```source/font/``` if it isn't there create it, if it is with Font Awesome files in it delete those files and replace them with the new ones.  You'll end up with a dir tree that looks like ```source/font/```.<br>
+4) Next move the ```font/``` from the Font Awesome package to ```source/font/``` if it isn't there create it.  If it is and contains Font Awesome files delete those files and replace them with the new ones.  You'll end up with a dir tree that looks like ```source/font/```.<br>
 
 Font Awesome should be good to go now.
 
