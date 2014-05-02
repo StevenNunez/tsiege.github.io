@@ -102,6 +102,19 @@ article h2.title a:hover {
   color: #07CC95;
 }
 
+h4 {
+  margin-top: 0 !important;
+}
+
+h4 + ul {
+  margin-top: 0 !important;
+  list-style-type: initial;
+}
+
+ul li ul {
+  list-style-type: circle;
+}
+
 @media only screen and (min-width: 774px) {
   .about-me-bio {
     float: left;
