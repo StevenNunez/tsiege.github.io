@@ -3,7 +3,7 @@ layout: post
 title: "The Tech Interview Cheat Sheet"
 date: 2014-05-02 19:39:02 -0400
 comments: true
-categories: "Tech&nbspInterview Comp Sci CS Cheat&nbspSheet"
+categories: "Tech&nbspInterview Comp&nbspSci CS Cheat&nbspSheet"
 ---
 ## Studying for a Tech Interview Sucks, so Here's a Cheat Sheet to Help
 
