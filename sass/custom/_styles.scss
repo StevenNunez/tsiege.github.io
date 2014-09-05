@@ -111,6 +111,10 @@ h4 + ul {
   list-style-type: initial;
 }
 
+h3 + ul {
+  list-style-type: initial;
+}
+
 ul li ul {
   list-style-type: circle;
 }
