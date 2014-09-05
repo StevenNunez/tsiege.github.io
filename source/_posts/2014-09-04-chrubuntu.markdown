@@ -77,4 +77,9 @@ My computer is stuck booting into Ubuntu; how do I stop it?
   4. Next enter `sudo -s set_gbb_flags.sh 0x00000000`
   5. Restart your computer and you will now stay on the "OS verification off". From here switch to Ubuntu [CTRL + l] or Chrome OS [CTRL + d]
 
+Stuck as a Guest in ChrUbuntu:
+I've run the install script, ChrUbuntu was installed, but I'm stuck being logged in as guest...
+  - The source of this bug remains a mystery as of right now, but it is likely something went wrong with installing the patches for the Ubuntu OS.
+  - To fix this you need to wipe your computer using the Chrome OS Recovery Image and reinstall.
+
 I will add to this post if I think of anything else.
