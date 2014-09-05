@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress&nbspThemes | Ready or Blog Here I Code]]></title>
   <link href="http://TSiege.github.io/blog/categories/octopress-and-nbspthemes/atom.xml" rel="self"/>
   <link href="http://TSiege.github.io/"/>
-  <updated>2014-09-05T16:20:22-04:00</updated>
+  <updated>2014-09-05T16:22:23-04:00</updated>
   <id>http://TSiege.github.io/</id>
   <author>
     <name><![CDATA[Tristan Siegel]]></name>
@@ -91,7 +91,7 @@ In</code><em>layouts/<code>you'll be able to make your own if you want. These la
 
 <p>Getting a new favicon for your blog isn&rsquo;t too hard; there are just several favicon.pngs floating around the octopress blog.  But the real favicon, or at least the one which is actually used by octopress is in the top level of <code>source/</code>.  I simply deleted this favicon and replaced it with my own.  Next to make sure it is properly being required by the head of your blog&rsquo;s page.  In <code>source/_includes/head.html</code> is the line:
 <code>html
-&lt;link href="{{ root_url }}/favicon.ico" rel="shortcut icon"&gt;
+&lt;link href="/favicon.ico" rel="shortcut icon"&gt;
 </code>
 Make sure the <code>favicon.ico</code> part is the exact same name as your favicon on the top level of <code>source/</code> and you should be good to go.</p>
 
