@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress&nbspLayouts | Ready or Blog Here I Code]]></title>
+  <link href="http://TSiege.github.io/blog/categories/octopress-and-nbsplayouts/atom.xml" rel="self"/>
+  <link href="http://TSiege.github.io/"/>
+  <updated>2014-09-05T16:14:14-04:00</updated>
+  <id>http://TSiege.github.io/</id>
+  <author>
+    <name><![CDATA[Tristan Siegel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tips on Customizing Octopress]]></title>
+    <link href="http://TSiege.github.io/blog/2014/04/27/tips-on-setting-up-octopress/"/>
+    <updated>2014-04-27T14:55:38-04:00</updated>
+    <id>http://TSiege.github.io/blog/2014/04/27/tips-on-setting-up-octopress</id>
+    <content type="html"><![CDATA[<h3>So you&rsquo;re lost on setting up an octopress blog.</h3>
+
+<hr>
+
+
+<p>Having had just made my own Octopress Blog, I can safely say there are some things I wish were clearer about setting one up. So that&rsquo;s what this blog post is about! This post <i>isn&rsquo;t</i> about how to make a Octopress blog, for that you should go to <a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a> and follow the other tutorials to get the basics going. Rather this is about some pointers on how Octopress works and how to customize some things.</p>
+
+<h3>Getting a better theme.</h3>
+
+<hr>
+
+
+<p>While Octopress is great it ain&rsquo;t too pretty.  After running <code>rake setup_github_pages</code>, which sets up your url and the correct branch for your repo, it is a good time to get a new theme.  <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">This</a> will help you find an awesome theme built specifically for Octopress all come with site previews as well as the necessary steps to using their theme. Here are the generic steps for your command line:
+<code>
+$ cd octopress
+$ git clone GIT_URL .themes/THEME_NAME
+$ rake install['THEME_NAME']
+$ rake generate
+</code></p>
+
+<h3>Customizing your style sheets.</h3>
+
+<hr>
+
+
+<p>Octopress can be a little confusing since it has many duplicate files and directories.  But all the changes you&rsquo;ll need to make are going to be in <code>sass/</code> directory on the top level of Octopress.  In that directory will be a <code>custom/</code> folder that contains <code>_styles.scss</code> file.  That file is where all your complex custom css or sass will go.  For example, if you want to change a default color that your theme uses, change its value in the <code>_color.css</code> file in the same <code>custom/</code> directory.</p>
+
+<p>The way Octopress works is that it will require <code>sass/screen.scss</code>, which in turn requires partials on the top level of the <code>sass/</code> directory, which those partials compile the styles of each other directory in <code>sass/</code>.  The style sheets in <code>custom/</code> are compiled last and <code>custom/_styles.scss</code> is the last of last, letting its styling override all others.</p>
+
+<p>For more about customizing your style sheets see <a href="http://octopress.org/docs/theme/styles/">http://octopress.org/docs/theme/styles/</a></p>
+
+<h3>Getting Font Awesome</h3>
+
+<hr>
+
+
+<p>Skip this if Font Awesome works with your theme.</p>
+
+<p>Font Awesome lives up to its name, but getting it into your Octopress blog can be a pain, but luckily I&rsquo;ve found a great <a href="http://infectiouscoding.com/blog/2013/09/04/add-font-awesome-to-octopress/">blog</a> that helped. Here&rsquo;s the gist:<br>
+1) Download and unzip <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>.<br>
+2) If you don&rsquo;t have a <code>sass/font-awesome/</code> folder then create one and move the <code>scss/</code> folder from the Font Awesome package you just downloaded into <code>sass/font-awesome/</code>. This will create a dir tree that looks like <code>sass/font-awesome/scss/</code>.<br>
+3) Finish up in <code>sass/font-awesome/scss/</code> by adding this line, <code>@import "font-awesome/scss/font-awesome.scss"</code>, to <code>screen.scss</code> in the top level of <code>sass/</code>.<br>
+4) Next move the <code>font/</code> from the Font Awesome package to <code>source/font/</code> if it isn&rsquo;t there create it.  If it is and contains Font Awesome files delete those files and replace them with the new ones.  You&rsquo;ll end up with a dir tree that looks like <code>source/font/</code>.<br></p>
+
+<p>Font Awesome should be good to go now.</p>
+
+<h3>Setting Up Your Layouts</h3>
+
+<hr>
+
+
+<p>For almost anything else you&rsquo;d want to do with Octopress you&rsquo;ll be in <code>source/</code>, which is the top directory of your Octopress blog.  When you run <code>rake new_post["title"]</code> it will create your markdown file here in <code>source/_posts/</code>.  With Octopress your pages use something like what&rsquo;s shown below to create their complete layout.  It&rsquo;s kind of like in Rails when a block of html yields to a partial to render another part of a page.
+```</p>
+
+<hr />
+
+<p>  layout: default
+  title: Blog Archives</p>
+
+<hr />
+
+<p><code>
+In</code><em>layouts/<code>you'll be able to make your own if you want. These layouts often require partials from</code></em>inlcudes/<code>.  Once you finish making your own layout add</code>layout: some_custom_layout``` to your page.</p>
+
+<p>For more of what you can do in <code>source/</code> check out <a href="http://octopress.org/docs/theme/template/">http://octopress.org/docs/theme/template/</a></p>
+
+<h3>Getting a New Favicon</h3>
+
+<hr>
+
+
+<p>Getting a new favicon for your blog isn&rsquo;t too hard; there are just several favicon.pngs floating around the octopress blog.  But the real favicon, or at least the one which is actually used by octopress is in the top level of <code>source/</code>.  I simply deleted this favicon and replaced it with my own.  Next to make sure it is properly being required by the head of your blog&rsquo;s page.  In <code>source/_includes/head.html</code> is the line:
+<code>html
+&lt;link href="/favicon.ico" rel="shortcut icon"&gt;
+</code>
+Make sure the <code>favicon.ico</code> part is the exact same name as your favicon on the top level of <code>source/</code> and you should be good to go.</p>
+
+<p>- If you change the favicon and don&rsquo;t see it, try clearing your browser&rsquo;s cache in order to properly update the blog&rsquo;s styling.</p>
+]]></content>
+  </entry>
+  
+</feed>

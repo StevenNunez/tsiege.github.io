@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Chromebooks | Ready or Blog Here I Code]]></title>
+  <link href="http://TSiege.github.io/blog/categories/chromebooks/atom.xml" rel="self"/>
+  <link href="http://TSiege.github.io/"/>
+  <updated>2014-09-05T16:14:14-04:00</updated>
+  <id>http://TSiege.github.io/</id>
+  <author>
+    <name><![CDATA[Tristan Siegel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tips, Tricks, and Advice for installing ChrUbuntu on an Acer C720]]></title>
+    <link href="http://TSiege.github.io/blog/2014/09/04/chrubuntu/"/>
+    <updated>2014-09-04T14:38:49-04:00</updated>
+    <id>http://TSiege.github.io/blog/2014/09/04/chrubuntu</id>
+    <content type="html"><![CDATA[<h2>Some of this may even be useful for other models!!!</h2>
+
+<p>For the past couple of weeks my job has had me working on an internal project to create a shell script for installing Ubuntu with a completely furnished development environment for the Acer C720 Chromebooks.  That meant that each computer would need Ruby, RVM, Postgres, Sublime, Github credentials, customized bashrc, and whatever else we could think of.</p>
+
+<p>I started with <a href="https://github.com/codestarterorg/ubuntu-chromebook-installer">this awesome install script</a> by <a href="https://codestarter.org/">Codestarter</a>, which was a great basis since many of the largest hurdles were well hurdled.  I&rsquo;ve also played around witht Jay Lee&rsquo;s <a href="http://chromeos-cr48.blogspot.ca/">install script</a>, the guy who created ChrUbuntu.  And this blog post is the result of such tinkering.</p>
+
+<h2>Tips</h2>
+
+<h3>Helpful Resources:</h3>
+
+<ul>
+<li>Reddit&rsquo;s <a href="http://www.reddit.com/r/chrubuntu/">ChrUbuntu Thread</a>
+Lot&rsquo;s of answers to common problems as well as general advice.</li>
+<li>Ask Ubuntu&rsquo;s <a href="http://askubuntu.com/questions/tagged/chromebook">Chromebook Section</a>
+Ask Ubuntu is Stack Exchange&rsquo;s site devoted to all things Ubuntu, so it&rsquo;s it great resource if you have general Ubuntu questions too.</li>
+<li>Jay Lee&rsquo;s <a href="http://chromeos-cr48.blogspot.ca/">Chromebook Blog</a>
+While it hasn&rsquo;t been active for about a year, it is still the website of the guy who made ChrUbuntu, so reading some posts give you a better grounding about ChrUbuntu.</li>
+<li>Google&rsquo;s <a href="https://support.google.com/chromebook/answer/1080595?hl=en">Chromebook Support site</a>
+This website has a lot of helpful information about trouble shooting Chrome OS.
+<strong>NOTE</strong> The Chrome OS Recovery tool on this, at least for Macs, is <strong>outdated</strong>.
+See below for more information.  You <strong>MUST</strong> use this <a href="https://chrome.google.com/webstore/detail/chromebook-recovery-utili/jndclpdbaamdhonoechobihbbiimdgai?hl=en">version</a> of the recovery utility.</li>
+</ul>
+
+
+<h4>Need more SSD space?</h4>
+
+<p>This <a href="http://www.androidcentral.com/how-upgrade-ssd-your-acer-c720-chromebook">guide</a> to upgrading the SSD on an Acer C720. Fair warning, I haven&rsquo;t done this myself yet. But I&rsquo;ve read through it. It seems easy, and the page&rsquo;s comments echo this sentiment.</p>
+
+<h2>Tricks</h2>
+
+<h4>Default booting into Chrubuntu:</h4>
+
+<p>  <strong>NOTE</strong> This should only be done after you have completely installed Ubuntu and must be reverted if you intend on reformatting the computer.  It can also <em>only</em> be done if you have removed your write protect screw in order to change the SeaBIOS.
+  <strong>NOTE</strong> Doing this will void the warranty on the computer and potentionally brick the computer.  <strong>I AM NOT RESPONSIBLE FOR ANY DAMAGE TO YOUR MACHINE IF YOU <em>CHOOSE</em> TO DO THIS</strong></p>
+
+<p>  <em>If your write protect screw is already removed skip to step 6.</em>  One of the refurbished computers we used already so it&rsquo;s possible. You can check by starting at line 6 if you&rsquo;d like</p>
+
+<ol>
+<li> Turn off the computer.</li>
+<li> Flip the computer over and remove all 13 screws from the bottom (there is one beind the sticker that reads, &ldquo;Warranty Void If Seal Is Broken&rdquo;).</li>
+<li> Gently, unsnap the bottom of the case using your finger nails or a flathead screw driver.  These snaps should easily seperate so no need to force it.</li>
+<li> Once the case is removed locate the write protect screw, which is number 7 in <a href="http://www.chromium.org/_/rsrc/1381990807648/chromium-os/developer-information-for-chrome-os-devices/acer-c720-chromebook/c720-chromebook-annotated-innards.png">this photo</a> and remove it.</li>
+<li> Replace the bottom case, making sure it snaps back into place.  Now put back the 13 screws you removed.</li>
+<li> Reboot the computer and press [CTRL + d].</li>
+<li> Go into a shell terminal [CTRL + ALT + t] and then enter <code>shell</code>.</li>
+<li> Finally enter <code>sudo -s set_gbb_flags.sh 0x00000489</code>.</li>
+</ol>
+
+
+<br>
+
+
+<h4>Switching back to developer mode boot:</h4>
+
+<ol>
+<li> Boot into Chrome OS [CTRL + d]\ (You&rsquo;ll have like 3 seconds after starting the computer, so act fast.)</li>
+<li> Open the command line via [CTRL + ALT + t] then <code>shell</code></li>
+<li> Enter <code>sudo -s set_gbb_flags.sh 0x00000000</code></li>
+</ol>
+
+
+<br>
+
+
+<h4>Revert back to Factory Settings:</h4>
+
+<ol>
+<li> Make sure you default boot into developer mode first (see above).</li>
+<li> Run the Chrome OS recovery image (see below). This step isn&rsquo;t necessary, but I&rsquo;d play it safe to make sure the paritions are erased correctly.</li>
+<li> After it reboots press [SPACE BAR] then wait for the screen to refresh and press [ENTER]</li>
+</ol>
+
+
+<br>
+
+
+<h2>Trouble Shooting</h2>
+
+<h4>Developer Mode:</h4>
+
+<p>How the hell do I get into developer mode?
+  1. Enter [ESC + REFRESH + POWER]
+  2. On reboot your screen should read &ldquo;Chrome OS is missing or damaged&rdquo;
+  3. Ignore it; it&rsquo;s lying. Enter [CTRL + d] then [ENTER]</p>
+
+<br>
+
+
+<h4>USB or SD card not working, prompt says device is &lsquo;read-only&rsquo;:</h4>
+
+<ul>
+<li>Likely the USB or SD card is not properly formatted</li>
+<li>Use an application like Disk Utility on Macs to make sure the USB or SD card is formatted in FAT 32</li>
+<li>If it is not erase and reformat the USB or SD card as FAT 32</li>
+</ul>
+
+
+<br>
+
+
+<h4>Chrome OS is Damaged:</h4>
+
+<ol>
+<li> Download the <a href="https://chrome.google.com/webstore/detail/chromebook-recovery-utili/jndclpdbaamdhonoechobihbbiimdgai?hl=en">Chromebook Recovery Utility</a> app.
+<strong>NOTE</strong> Google has two recovery utilties, but this is the only one that works.You will need to switch to <a href="https://www.google.com/chrome/browser/beta.html?platform=mac&amp;extra=betachannel">Chrome Beta</a> if you are using a Mac as your primary computer.</li>
+<li> Create a new image of Chrome OS specific to your machine.  The model number is at the bottom of the scary screen you should see your machines model number.</li>
+<li> After the Chromebook Recovery Utility is finished creating a recovery USB or SD simply plug it into the machine and let it do it&rsquo;s thing. It shouldn&rsquo;t take more than 5 minutes</li>
+</ol>
+
+
+<br>
+
+
+<h4>Stuck in Ubunutu reboot:</h4>
+
+<ol>
+<li> Restart your computer</li>
+<li> As soon as you see the screen with &ldquo;OS verification off&rdquo; press [CTRL + d]</li>
+<li> Login as guest and open a shell with [CTRL + ALT + t] and enter <code>shell</code></li>
+<li> Next enter <code>sudo -s set_gbb_flags.sh 0x00000000</code></li>
+<li> Restart your computer and you will now stay on the &ldquo;OS verification off&rdquo;. From here switch to Ubuntu [CTRL + l] or Chrome OS [CTRL + d]</li>
+</ol>
+
+
+<br>
+
+
+<h4>Stuck as a Guest in ChrUbuntu:</h4>
+
+<ul>
+<li>The source of this bug remains a mystery as of right now, but it is likely something went wrong with installing the patches for the Ubuntu OS.</li>
+<li>To fix this you need to wipe your computer using the Chrome OS Recovery Image and reinstall ChrUbuntu.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

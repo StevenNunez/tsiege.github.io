@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CS | Ready or Blog Here I Code]]></title>
+  <link href="http://TSiege.github.io/blog/categories/cs/atom.xml" rel="self"/>
+  <link href="http://TSiege.github.io/"/>
+  <updated>2014-09-05T16:14:14-04:00</updated>
+  <id>http://TSiege.github.io/</id>
+  <author>
+    <name><![CDATA[Tristan Siegel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Tech Interview Cheat Sheet]]></title>
+    <link href="http://TSiege.github.io/blog/2014/05/02/tech-interview-cheat-sheet/"/>
+    <updated>2014-05-02T19:39:02-04:00</updated>
+    <id>http://TSiege.github.io/blog/2014/05/02/tech-interview-cheat-sheet</id>
+    <content type="html"><![CDATA[<h2>Studying for a Tech Interview Sucks, so Here&rsquo;s a Cheat Sheet to Help</h2>
+
+<p>This list is meant to be a both a quick guide and reference for further research into these topics.  It&rsquo;s basically a summary of that comp sci course you never took or forgot about, so there&rsquo;s no way it can cover everything in depth.  It also will be available as a <a href="https://gist.github.com/TSiege/cbb0507082bb18ff7e4b">gist</a> on Github for everyone to edit and add to.</p>
+
+<h2>Data Structure Basics</h2>
+
+<h3><strong>Array</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>Stores data elements based on an sequential, most commonly 0 based, index.</li>
+<li>Based on <a href="http://en.wikipedia.org/wiki/Tuple">tuples</a> from set theory.</li>
+<li>They are one of the oldest, most commonly used data structures.</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>Optimal for indexing; bad at searching, inserting, and deleting (except at the end).</li>
+<li><strong>Linear arrays</strong>, or one dimensional arrays, are the most basic.
+
+<ul>
+<li>Are static in size, meaning that they are declared with a fixed size.</li>
+</ul>
+</li>
+<li><strong>Dynamic arrays</strong> are like one dimensional arrays, but have reserved space for additional elements.
+
+<ul>
+<li>If a dynamic array is full, it copies it&rsquo;s contents to a larger array.</li>
+</ul>
+</li>
+<li><strong>Two dimensional arrays</strong> have x and y indices like a grid or nested arrays.</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Indexing:         Linear array: O(1),      Dynamic array: O(1)</li>
+<li>Search:           Linear array: O(n),      Dynamic array: O(n)</li>
+<li>Optimized Search: Linear array: O(log n), Dynamic array: O(log n)</li>
+<li>Insertion:        Linear array: n/a        Dynamic array: O(n)</li>
+</ul>
+
+
+<h3><strong>Linked List</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>Stores data with <strong>nodes</strong> that point to other nodes.
+
+<ul>
+<li>Nodes, at its most basic it has one datum and one reference (another node).</li>
+<li>A linked list <em>chains</em> nodes together by pointing one node&rsquo;s reference towards another node.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>Designed to optimize insertion and deletion, slow at indexing and searching.</li>
+<li><strong>Doubly linked list</strong> has nodes that reference the previous node.</li>
+<li><strong>Circularly linked list</strong> is simple linked list whose <strong>tail</strong>, the last node, references the <strong>head</strong>, the first node.</li>
+<li><strong>Stack</strong>, commonly implemented with linked lists but can be made from arrays too.
+
+<ul>
+<li>Stacks are <strong>last in, first out</strong> (LIFO) data structures.</li>
+<li>Made with a linked list by having the head be the only place for insertion and removal.</li>
+</ul>
+</li>
+<li><strong>Queues</strong>, too can be implemented with a linked list or an array.
+
+<ul>
+<li>Queues are a <strong>first in, first out</strong> (FIFO) data structure.</li>
+<li>Made with a doubly linked list that only removes from head and adds to tail.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Indexing:         Linked Lists: O(n)</li>
+<li>Search:           Linked Lists: O(n)</li>
+<li>Optimized Search: Linked Lists: O(n)</li>
+<li>Insertion:        Linked Lists: O(1)</li>
+</ul>
+
+
+<h3><strong>Hash Table or Hash Map</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>Stores data with key value pairs.</li>
+<li><strong>Hash functions</strong> accept a key and return an output unique only to that specific key.
+
+<ul>
+<li>This is known as <strong>hashing</strong>, which is the concept that an input and an output have a one-to-one correspondence to map information.</li>
+<li>Hash functions return a unique address in memory for that data.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>Designed to optimize searching, insertion, and deletion.</li>
+<li><strong>Hash collisions</strong> are when a hash function returns the same output for two distinct outputs.
+
+<ul>
+<li>All hash functions have this problem.</li>
+<li>This is often accommodated for by having the hash tables be very large.</li>
+</ul>
+</li>
+<li>Hashes are important for associative arrays and database indexing.</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Indexing:         Hash Tables: O(1)</li>
+<li>Search:           Hash Tables: O(1)</li>
+<li>Insertion:        Hash Tables: O(1)</li>
+</ul>
+
+
+<h3><strong>Binary Tree</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>Is a tree like data structure where every node has at most two children.
+
+<ul>
+<li>There is one left and right child node.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>Designed to optimize searching and sorting.</li>
+<li>A <strong>degenerate tree</strong> is an unbalanced tree, which if entirely one-sided is a essentially a linked list.</li>
+<li>They are comparably simple to implement than other data structures.</li>
+<li>Used to make <strong>binary search trees</strong>.
+
+<ul>
+<li>A binary tree that uses comparable keys to assign which direction a child is.</li>
+<li>Left child has a key smaller than it&rsquo;s parent node.</li>
+<li>Right child has a key greater than it&rsquo;s parent node.</li>
+<li>There can be no duplicate node.</li>
+<li>Because of the above it is more likely to be used as a data structure than a binary tree.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Indexing:  Binary Search Tree: O(log n)</li>
+<li>Search:    Binary Search Tree: O(log n)</li>
+<li>Insertion: Binary Search Tree: O(log n)</li>
+</ul>
+
+
+<h2>Search Basics</h2>
+
+<h3><strong>Breadth First Search</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>An algorithm that searches a tree (or graph) by searching levels of the tree first, starting at the root.
+
+<ul>
+<li>It finds every node on the same level, most often moving left to right.</li>
+<li>While doing this it tracks the children nodes of the nodes on the current level.</li>
+<li>When finished examining a level it moves to the left most node on the next level.</li>
+<li>The bottom-right most node is evaluated last (the node that is deepest and is farthest right of it&rsquo;s level).</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>Optimal for searching a tree that is wider than it is deep.</li>
+<li>Uses a queue to store information about the tree while it traverses a tree.
+
+<ul>
+<li>Because it uses a queue it is more memory intensive than <strong>depth first search</strong>.</li>
+<li>The queue uses more memory because it needs to stores pointers</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Search: Breadth First Search: O(|E| + |V|)</li>
+<li>E is number of edges</li>
+<li>V is number of vertices</li>
+</ul>
+
+
+<h3><strong>Depth First Search</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>An algorithm that searches a tree (or graph) by searching depth of the tree first, starting at the root.
+
+<ul>
+<li>It traverses left down a tree until it cannot go further.</li>
+<li>Once it reaches the end of a branch it traverses back up trying the right child of nodes on that branch, and if possible left from the right children.</li>
+<li>When finished examining a branch it moves to the node right of the root then tries to go left on all it&rsquo;s children until it reaches the bottom.</li>
+<li>The right most node is evaluated last (the node that is right of all it&rsquo;s ancestors).</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>Optimal for searching a tree that is deeper than it is wide.</li>
+<li>Uses a stack to push nodes onto.
+
+<ul>
+<li>Because a stack is LIFO it does not need to keep track of the nodes pointers and is therefore less memory intensive than breadth first search.</li>
+<li>Once it cannot go further left it begins evaluating the stack.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Search: Depth First Search: O(|E| + |V|)</li>
+<li>E is number of edges</li>
+<li>V is number of vertices</li>
+</ul>
+
+
+<h4>Breadth First Search Vs. Depth First Search</h4>
+
+<ul>
+<li>The simple answer to this question is that it depends on the size and shape of the tree.
+
+<ul>
+<li>For wide, shallow trees use Breadth First Search</li>
+<li>For deep, narrow trees use Depth First Search</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Nuances:</h4>
+
+<ul>
+<li>Because BFS uses queues to store information about the nodes and its children, it could use more memory than is available on your computer.  (But you probably won&rsquo;t have to worry about this.)</li>
+<li>If using a DFS on a tree that is very deep you might go unnecessarily deep in the search. See <a href="http://xkcd.com/761/">xkcd</a> for more information.</li>
+<li>Breadth First Search tends to be a looping algorithm.</li>
+<li>Depth First Search tends to be a recursive algorithm.</li>
+</ul>
+
+
+<h2>Efficient Sorting Basics</h2>
+
+<h3><strong>Merge Sort</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>A comparison based sorting algorithm
+
+<ul>
+<li>Divides entire dataset into groups of at most two.</li>
+<li>Compares each number one at a time, moving the smallest number to left of the pair.</li>
+<li>Once all pairs sorted it then compares left most elements of the two leftmost pairs creating a sorted group of four with the smallest numbers on the left and the largest ones on the right.</li>
+<li>This process is repeated until there is only one set.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>This is one of the most basic sorting algorithms.</li>
+<li>Know that it divides all the data into as small possible sets then compares them.</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Best Case Sort: Merge Sort: O(n)</li>
+<li>Average Case Sort: Merge Sort: O(n log n)</li>
+<li>Worst Case Sort: Merge Sort: O(n log n)</li>
+</ul>
+
+
+<h3><strong>Quicksort</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>A comparison based sorting algorithm
+
+<ul>
+<li>Divides entire dataset in half by selecting the average element and putting all smaller elements to the left of the average.</li>
+<li>It repeats this process on the left side until it is comparing only two elements at which point the left side is sorted.</li>
+<li>When the left side is finished sorting it performs the same operation on the right side.</li>
+</ul>
+</li>
+<li>Computer architecture favors the quicksort process.</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>While it has the same Big O as (or worse in some cases) many other sorting algorithms it is often faster in practice than many other sorting algorithms, such as merge sort.</li>
+<li>Know that it halves the data set by the average continuously until all the information is sorted.</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Best Case Sort: Merge Sort: O(n)</li>
+<li>Average Case Sort: Merge Sort: O(n log n)</li>
+<li>Worst Case Sort: Merge Sort: O(n<sup>2</sup>)</li>
+</ul>
+
+
+<h3><strong>Bubble Sort</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>A comparison based sorting algorithm
+
+<ul>
+<li>It iterates left to right comparing every couplet, moving the smaller element to the left.</li>
+<li>It repeats this process until it no longer moves and element to the left.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>While it is very simple to implement, it is the least efficient of these three sorting methods.</li>
+<li>Know that it moves one space to the right comparing two elements at a time and moving the smaller on to left.</li>
+</ul>
+
+
+<h4>Big O efficiency:</h4>
+
+<ul>
+<li>Best Case Sort: Merge Sort: O(n)</li>
+<li>Average Case Sort: Merge Sort: O(n<sup>2</sup>)</li>
+<li>Worst Case Sort: Merge Sort: O(n<sup>2</sup>)</li>
+</ul>
+
+
+<h4>Merge Sort Vs. Quicksort</h4>
+
+<ul>
+<li>Quicksort is likely faster in practice.</li>
+<li>Merge Sort divides the set into the smallest possible groups immediately then reconstructs the incrementally as it sorts the groupings.</li>
+<li>Quicksort continually divides the set by the average, until the set is recursively sorted.</li>
+</ul>
+
+
+<h2>Basic Types of Algorithms</h2>
+
+<h3><strong>Recursive Algorithms</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>An algorithm that calls itself in its definition.
+
+<ul>
+<li><strong>Recursive case</strong> a conditional statement that is used to trigger the recursion.</li>
+<li><strong>Base case</strong> a conditional statement that is used to break the recursion.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li><strong>Stack level too deep</strong> and <strong>stack overflow</strong>.
+
+<ul>
+<li>If you&rsquo;ve seen either of these from a recursive algorithm, you messed up.</li>
+<li>It means that your base case was never triggered because it was faulty or the problem was so massive you ran out of RAM before reaching it.</li>
+<li>Knowing whether or not you will reach a base case is integral to correctly using recursion.</li>
+<li>Often used in Depth First Search</li>
+</ul>
+</li>
+</ul>
+
+
+<h3><strong>Iterative Algorithms</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>An algorithm that is called repeatedly but for a finite number of times, each time being a single iteration.
+
+<ul>
+<li>Often used to move incrementally through a data set.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>Generally you will see iteration as loops, for, while, and until statements.</li>
+<li>Think of iteration as moving one at a time through a set.</li>
+<li>Often used to move through an array.</li>
+</ul>
+
+
+<h4>Recursion Vs. Iteration</h4>
+
+<ul>
+<li>The differences between recursion and iteration can be confusing to distinguish since both can be used to implement the other. But know that,
+
+<ul>
+<li>Recursion is, usually, more expressive and easier to implement.</li>
+<li>Iteration uses less memory.</li>
+</ul>
+</li>
+<li><strong>Functional languages</strong> tend to use recursion. (i.e. Haskell)</li>
+<li><strong>Imperative languages</strong> tend to use iteration. (i.e. Ruby)</li>
+<li>Check out this <a href="http://stackoverflow.com/questions/19794739/what-is-the-difference-between-iteration-and-recursion">Stack Overflow post</a> for more info.</li>
+</ul>
+
+
+<h4>Pseudo Code of Moving Through an Array (this is why iteration is used for this)</h4>
+
+<p>```
+Recursion                         | Iteration
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+recursive method (array, n)       | iterative method (array)
+  if array[n] is not nil          |   for n from 0 to size of array</p>
+
+<pre><code>print array[n]                |     print(array[n])
+recursive method(array, n+1)  |
+</code></pre>
+
+<p>  else                            |</p>
+
+<pre><code>exit loop                     |
+</code></pre>
+
+<p>```</p>
+
+<h3><strong>Greedy Algorithm</strong></h3>
+
+<h4>Definition:</h4>
+
+<ul>
+<li>An algorithm that, while executing, selects only the information that meets a certain criteria.</li>
+<li>The general five components, taken from <a href="http://en.wikipedia.org/wiki/Greedy_algorithm#Specifics">Wikipedia</a>:
+
+<ul>
+<li>A candidate set, from which a solution is created.</li>
+<li>A selection function, which chooses the best candidate to be added to the solution.</li>
+<li>A feasibility function, that is used to determine if a candidate can be used to contribute to a solution.</li>
+<li>An objective function, which assigns a value to a solution, or a partial solution.</li>
+<li>A solution function, which will indicate when we have discovered a complete solution.</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>What you need to know:</h4>
+
+<ul>
+<li>Used to find the optimal solution for a given problem.</li>
+<li>Generally used on sets of data where only a small proportion of the information evaluated meets the desired result.</li>
+<li>Often a greedy algorithm can help reduce the Big O of an algorithm.</li>
+</ul>
+
+
+<h4>Pseudo Code of a Greedy Algorithm to Find Largest Difference of any Two Numbers in an Array.</h4>
+
+<p><code>
+greedy algorithm (array)
+  var largest difference = 0
+  var new difference = find next difference (array[n], array[n+1])
+  largest difference = new difference if new difference is &gt; largest difference
+  repeat above two steps until all differences have been found
+  return largest difference
+</code></p>
+
+<p>This algorithm never needed to compare all the differences to one another, saving it an entire iteration.</p>
+]]></content>
+  </entry>
+  
+</feed>

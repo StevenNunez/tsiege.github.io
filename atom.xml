@@ -1,90 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Ready or Blog Here I Code</title>
-	<meta name="author" content="Tristan Siegel">
+  <title><![CDATA[Ready or Blog Here I Code]]></title>
+  <link href="http://TSiege.github.io/atom.xml" rel="self"/>
+  <link href="http://TSiege.github.io/"/>
+  <updated>2014-09-05T16:14:14-04:00</updated>
+  <id>http://TSiege.github.io/</id>
+  <author>
+    <name><![CDATA[Tristan Siegel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
-	
-	<meta name="description" content="Some of this may even be useful for other models!!! For the past couple of weeks my job has had me working on an internal project to create a shell &hellip;">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<link href="/atom.xml" rel="alternate" title="Ready or Blog Here I Code" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.ico" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-50616594-1', 'tsiege.github.io');
-	  ga('send', 'pageview');
-
-	</script>
-	
-</head>
-
-
-  <body>
-    <div id="wrapper">
-    	<header id="header" class="inner"><h1><a href="/">Ready or Blog Here I Code</a></h1>
-<nav id="main-nav"><ul class="main">
-  <li><a href="/about">About</a></li>
-  <li><a href="/projects">Projects</a></li>
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</nav>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container"><ul class="main">
-  <li><a href="/about">About</a></li>
-  <li><a href="/projects">Projects</a></li>
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="https://www.google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:TSiege.github.io">
-			</form>
-		</div>
-	</div>
-</nav>
-<nav id="sub-nav" class="alignright">
-	<form class="search" action="https://www.google.com/search" method="get">
-		<input class="alignright" type="text" name="q" results="0">
-		<input type="hidden" name="q" value="site:TSiege.github.io">
-	</form>
-</nav>
-
-</header>
-    	
-    		
-    	
-    	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/09/04/chrubuntu/">
-		
-			Tips, Tricks, and Advice for Installing ChrUbuntu on an Acer C720</a>
-	</h2>
-	<div class="entry-content">
-		<h2>Some of this may even be useful for other models!!!</h2>
+  
+  <entry>
+    <title type="html"><![CDATA[Tips, Tricks, and Advice for installing ChrUbuntu on an Acer C720]]></title>
+    <link href="http://TSiege.github.io/blog/2014/09/04/chrubuntu/"/>
+    <updated>2014-09-04T14:38:49-04:00</updated>
+    <id>http://TSiege.github.io/blog/2014/09/04/chrubuntu</id>
+    <content type="html"><![CDATA[<h2>Some of this may even be useful for other models!!!</h2>
 
 <p>For the past couple of weeks my job has had me working on an internal project to create a shell script for installing Ubuntu with a completely furnished development environment for the Acer C720 Chromebooks.  That meant that each computer would need Ruby, RVM, Postgres, Sublime, Github credentials, customized bashrc, and whatever else we could think of.</p>
 
@@ -218,47 +152,15 @@ See below for more information.  You <strong>MUST</strong> use this <a href="htt
 <li>To fix this you need to wipe your computer using the Chrome OS Recovery Image and reinstall ChrUbuntu.</li>
 </ul>
 
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2014-09-04T14:38:49-04:00" pubdate data-updated="true">Sep 4<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/acer-c720/'>Acer&nbsp;C720</a>, <a class='category' href='/blog/categories/chrubuntu/'>ChrUbuntu</a>, <a class='category' href='/blog/categories/chrome-os/'>Chrome&nbsp;OS</a>, <a class='category' href='/blog/categories/chromebooks/'>Chromebooks</a>, <a class='category' href='/blog/categories/ubuntu/'>Ubuntu</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/05/11/method-missing/">
-		
-			Define_method vs Method_missing</a>
-	</h2>
-	<div class="entry-content">
-		<h2>The Dark Arts of Programming</h2>
+  <entry>
+    <title type="html"><![CDATA[define_method vs method_missing]]></title>
+    <link href="http://TSiege.github.io/blog/2014/05/11/method-missing/"/>
+    <updated>2014-05-11T10:31:50-04:00</updated>
+    <id>http://TSiege.github.io/blog/2014/05/11/method-missing</id>
+    <content type="html"><![CDATA[<h2>The Dark Arts of Programming</h2>
 
 <p>Before I delve into the differences between define_method and method_missing, I want to quickly talk about metaprogramming in general.  Metaprogramming is, at a most basic level, code that writes code.  This is powerful, but also potentially dangerous.  You could easily write a meta-method that will overwrite an integral method and break your program, or create subtle edge cases that throw cryptic errors.  Metaprogramming tricks are clever, but clever code means difficult code to test. So with these warnings in mind let&rsquo;s carefully explore define_method and method_missing.</p>
 
@@ -396,47 +298,15 @@ See below for more information.  You <strong>MUST</strong> use this <a href="htt
 <h3>When to use method_missing</h3>
 
 <p>Method_missing is really meant to be used when you are unclear of the method names.  This is rarely the case if it is ever your own project; instead it is often used in Ruby libraries or gems.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2014-05-11T10:31:50-04:00" pubdate data-updated="true">May 11<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/dynamic-and-nbspmethod-and-nbspdefinition/'>Dynamic&nbspMethod&nbspDefinition</a>, <a class='category' href='/blog/categories/ghost-and-nbspmethods/'>Ghost&nbspMethods</a>, <a class='category' href='/blog/categories/meta-and-nbspprogramming/'>Meta&nbspProgramming</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/define-method/'>define_method</a>, <a class='category' href='/blog/categories/method-missing/'>method_missing</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/05/02/tech-interview-cheat-sheet/">
-		
-			The Tech Interview Cheat Sheet</a>
-	</h2>
-	<div class="entry-content">
-		<h2>Studying for a Tech Interview Sucks, so Here&rsquo;s a Cheat Sheet to Help</h2>
+  <entry>
+    <title type="html"><![CDATA[The Tech Interview Cheat Sheet]]></title>
+    <link href="http://TSiege.github.io/blog/2014/05/02/tech-interview-cheat-sheet/"/>
+    <updated>2014-05-02T19:39:02-04:00</updated>
+    <id>http://TSiege.github.io/blog/2014/05/02/tech-interview-cheat-sheet</id>
+    <content type="html"><![CDATA[<h2>Studying for a Tech Interview Sucks, so Here&rsquo;s a Cheat Sheet to Help</h2>
 
 <p>This list is meant to be a both a quick guide and reference for further research into these topics.  It&rsquo;s basically a summary of that comp sci course you never took or forgot about, so there&rsquo;s no way it can cover everything in depth.  It also will be available as a <a href="https://gist.github.com/TSiege/cbb0507082bb18ff7e4b">gist</a> on Github for everyone to edit and add to.</p>
 
@@ -965,47 +835,15 @@ See below for more information.  You <strong>MUST</strong> use this <a href="htt
 
 
 <p>This algorithm never needed to compare all the differences to one another, saving it an entire iteration.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2014-05-02T19:39:02-04:00" pubdate data-updated="true">May 2<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/cs/'>CS</a>, <a class='category' href='/blog/categories/cheat-and-nbspsheet/'>Cheat&nbspSheet</a>, <a class='category' href='/blog/categories/comp-and-nbspsci/'>Comp&nbspSci</a>, <a class='category' href='/blog/categories/tech-and-nbspinterview/'>Tech&nbspInterview</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/27/tips-on-setting-up-octopress/">
-		
-			Tips on Customizing Octopress</a>
-	</h2>
-	<div class="entry-content">
-		<h3>So you&rsquo;re lost on setting up an octopress blog.</h3>
+  <entry>
+    <title type="html"><![CDATA[Tips on Customizing Octopress]]></title>
+    <link href="http://TSiege.github.io/blog/2014/04/27/tips-on-setting-up-octopress/"/>
+    <updated>2014-04-27T14:55:38-04:00</updated>
+    <id>http://TSiege.github.io/blog/2014/04/27/tips-on-setting-up-octopress</id>
+    <content type="html"><![CDATA[<h3>So you&rsquo;re lost on setting up an octopress blog.</h3>
 
 <hr>
 
@@ -1091,47 +929,15 @@ See below for more information.  You <strong>MUST</strong> use this <a href="htt
 <p>Make sure the <code>favicon.ico</code> part is the exact same name as your favicon on the top level of <code>source/</code> and you should be good to go.</p>
 
 <p>- If you change the favicon and don&rsquo;t see it, try clearing your browser&rsquo;s cache in order to properly update the blog&rsquo;s styling.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2014-04-27T14:55:38-04:00" pubdate data-updated="true">Apr 27<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/font-and-nbspawesome/'>Font&nbspAwesome</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/octopress-and-nbsplayouts/'>Octopress&nbspLayouts</a>, <a class='category' href='/blog/categories/octopress-and-nbspthemes/'>Octopress&nbspThemes</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/20/devise/">
-		
-			Devise, Read Its Documentation, Then Conquer</a>
-	</h2>
-	<div class="entry-content">
-		<p>This past weekend I implemented devise with my partner for a project we were working on.  The project was going well but for our rails app we wanted to use sessions to build out functionality. It felt like the logical step once we hit a wall with the back end and didn’t know where else to go.  A fellow student recommended the gem Devise.  We were hesitant but it sounded like the easiest way to implement sessions, which we had no experience doing in Rails.</p>
+  <entry>
+    <title type="html"><![CDATA[Devise, Read its Documentation, Then Conquer]]></title>
+    <link href="http://TSiege.github.io/blog/2014/03/20/devise/"/>
+    <updated>2014-03-20T15:15:59-04:00</updated>
+    <id>http://TSiege.github.io/blog/2014/03/20/devise</id>
+    <content type="html"><![CDATA[<p>This past weekend I implemented devise with my partner for a project we were working on.  The project was going well but for our rails app we wanted to use sessions to build out functionality. It felt like the logical step once we hit a wall with the back end and didn’t know where else to go.  A fellow student recommended the gem Devise.  We were hesitant but it sounded like the easiest way to implement sessions, which we had no experience doing in Rails.</p>
 
 <p>So we found a Rail’s Girls Guide on Devise, skipped to the part to where we implemented it and took off from there.  Within two minutes we had successfully installed Devise and broke everything in our app.  It was so simple though!</p>
 
@@ -1179,47 +985,15 @@ See below for more information.  You <strong>MUST</strong> use this <a href="htt
 <p>This current_user method let’s make a page layout responsive to logged in user, or someone just visiting our page.  It adds great functionality to the site and simple to expand on.</p>
 
 <p>So remember, before you implement any code in whatever language, be sure to read its documentation.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2014-03-20T15:15:59-04:00" pubdate data-updated="true">Mar 20<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/authentication/'>Authentication</a>, <a class='category' href='/blog/categories/devise/'>Devise</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/security/'>Security</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/06/database-migrations/">
-		
-			Database Migrations, Which Is What Exactly?</a>
-	</h2>
-	<div class="entry-content">
-		<p>I’m into my third week of Flatiron School’s Ruby Class, and I’ve hit a snag with databases.  No, not the deceptively complex nature and syntax of relational databases, which I’m 70% sure I kind of understand.  What I’m confused about is what exactly is a database migration.  What is being migrated? Schema? Data? Schema and data?</p>
+  <entry>
+    <title type="html"><![CDATA[Database Migrations, which is what exactly?]]></title>
+    <link href="http://TSiege.github.io/blog/2014/03/06/database-migrations/"/>
+    <updated>2014-03-06T14:03:28-05:00</updated>
+    <id>http://TSiege.github.io/blog/2014/03/06/database-migrations</id>
+    <content type="html"><![CDATA[<p>I’m into my third week of Flatiron School’s Ruby Class, and I’ve hit a snag with databases.  No, not the deceptively complex nature and syntax of relational databases, which I’m 70% sure I kind of understand.  What I’m confused about is what exactly is a database migration.  What is being migrated? Schema? Data? Schema and data?</p>
 
 <p>The vague answer is that it depends.  This week we have learned only about database migrations involving the schema.  The schema is the way the layout that data is stored in; it consists of tables, columns, and rows as well as the ways that those tables relate to one another.  If we want to change the schema we use a database migration.  This can happen in development, testing, or production when either a developer isn’t sure what the schema should be or if he or she wants to change the schema later on to add or drop a feature.  This is what we’ve been doing in class so far.</p>
 
@@ -1235,47 +1009,15 @@ See below for more information.  You <strong>MUST</strong> use this <a href="htt
 
 <p><a href="" title="http://guides.rubyonrails.org/migrations.html">ActiveRecord and Rails</a>
 <a href="" title="http://stackoverflow.com/a/5801140/3023931">Git vs. ActiveRecord</a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2014-03-06T14:03:28-05:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/activerecord/'>ActiveRecord</a>, <a class='category' href='/blog/categories/database-and-nbspmigrations/'>Database&nbspMigrations</a>, <a class='category' href='/blog/categories/legacy-and-nbspmigrations/'>Legacy&nbspMigrations</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/20/the-way-of-the-donkey/">
-		
-			The Way of the Donkey</a>
-	</h2>
-	<div class="entry-content">
-		<p>Almost everyday my dad and I have a routine where we exchange headlines and excerpts of articles from the Times.  Mostly we’ve read all the same articles and we butt heads about whatever the implications are.  But that day in November he had told me about the possible extinction of a breed of donkeys native to mountains of Portugal and Spain.  “No one uses donkeys anymore; they all have tractors. And everyone is emigrating to the cities.”</p>
+  <entry>
+    <title type="html"><![CDATA[The Way of the Donkey]]></title>
+    <link href="http://TSiege.github.io/blog/2014/02/20/the-way-of-the-donkey/"/>
+    <updated>2014-02-20T13:42:20-05:00</updated>
+    <id>http://TSiege.github.io/blog/2014/02/20/the-way-of-the-donkey</id>
+    <content type="html"><![CDATA[<p>Almost everyday my dad and I have a routine where we exchange headlines and excerpts of articles from the Times.  Mostly we’ve read all the same articles and we butt heads about whatever the implications are.  But that day in November he had told me about the possible extinction of a breed of donkeys native to mountains of Portugal and Spain.  “No one uses donkeys anymore; they all have tractors. And everyone is emigrating to the cities.”</p>
 
 <p>He went on to say to tell me how EU subsidizes farmers to keep their donkeys but that now the farmers, who still pay more to care for their donkeys than they receive in subsidies, are retiring and can’t care for them much longer.  It seems that the donkeys are inevitably turning from a relic into a memory of a pre-digital age.  I felt the same way.</p>
 
@@ -1290,74 +1032,7 @@ See below for more information.  You <strong>MUST</strong> use this <a href="htt
 <p>I didn’t know everything about Ruby, but bits and pieces of it were beginning to make sense to me.  It was slow going, but it wasn’t a dense cluster of indecipherable characters that I had imagined only people with super human thinking could translate and tabulate into meaning.</p>
 
 <p>A few weeks later I had found out I was accepted into the Flatiron School.  I was ecstatic.  Soon I thought the wall I had hit in teaching myself to code would be become easier to climb over, as teachers would guide me in doing so.  It has only been two weeks since I began, and I am still amazed at how I much I had underestimated just how much the school could teach me in such a short amount of time.  I no longer feel like I could be one of those donkeys, surviving in isolation while the world moved on.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2014-02-20T13:42:20-05:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/flatiron-and-nbspschool/'>Flatiron&nbspSchool</a>
-
-
-</div>
-	
-</div>
-</article>
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
-      <div id="footer">
-    	  <footer class="inner">Copyright &copy; 2014
-
-    Tristan Siegel
-
-</footer>
-      </div>
-    	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
-
-
-
-
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-50616594-1']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-
-
-
-    </div>
-  </body>
-</html>
+</feed>
