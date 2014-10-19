@@ -4,7 +4,7 @@
 
 url: http://TSiege.github.io
 title: Ready or Blog Here I Code
-subtitle: 
+subtitle:
 author: Tristan Siegel
 simple_search: https://www.google.com/search
 description: My little blog about Ruby Javascript and anything else that interests me about coding.
@@ -90,8 +90,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: httptsiegegithubio
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-50616594-1
