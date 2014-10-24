@@ -5,7 +5,7 @@ date: 2014-10-22 18:27:12 -0400
 comments: true
 categories: JavaScript JS Object&nbspOriented&nbspProgramming OO OOP D3.js JavaScript&nbspLibraries
 ---
-#Introduction
+# Introduction
 This post covers how to turn any pile of spaghetti JavaScript into an object oriented composition.  Be it jQuery selectors and listeners, some other JS library, or your own code.  The code I'm using will contain some D3.js, the data visualization library, but you do not need to be familiar with it to take away good design ideas.  I'll make sure to explain any object oriented terms that I use.
 
 # The Problem I Faced
@@ -16,4 +16,4 @@ The graph looked good, but it was brittle.  Adding new features was painful, and
 # The Solution (you guessed it, OO!)
 Meaning, that I needed to create a set of objects to communicate with one another.  The code as it was functional programming.  A series of functions were called in an exact order, and it _had_ to be that order.  That meant any change couldn't disturb that order.  However, if I had used an object oriented approach I could have objects talk to one another and use their own methods as they saw fit.
 
-Basically, object orientation is awesome and organized while functional programming is not as much.  Both have their virtues, but I prefer the former.
+Basically, I like object orientation for organizing my code, both styles have their merits and detractions.  This post isn't about that debate, so let's move along.
