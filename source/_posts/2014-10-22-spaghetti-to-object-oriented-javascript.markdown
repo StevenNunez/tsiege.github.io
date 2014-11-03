@@ -48,7 +48,14 @@ function createSvg(){
 }
 ```
 Many of the refactored functions were like `createSvg`, setters that use the D3js library to create elements for the DOM, attach elements to the DOM, and to create other functions involved in drawing the chart.  Some of the variables created in this manner were used various times, others just once.  
+
 Realizing this allowed me to group the functions together. I ended up with several different sets, one being the main SVG element that all the parts of the graph get added to.  Each part of the graph such as the line itself, would become their own constructor function.
+
 Another part of this process was moving all variable declarations to the top of the file.  Partially because I wasn't too sure if the variables were being used by multiple parts of the graph or not.  The main reason was that I already knew one aspect of my design; I would make a duck type that would pass itself to other options when it called them.
 
 # Creating the Duck Type
+A duck type is a substitute for inheritance.  Instead of worrying about if all the objects interacting with one another are of a common class, all we need to be concerned with is whether or not it they share a common interface, i.e. implement the same method(s).
+
+My interface is simple.  All parts of the graphs just need to add themselves to the chart, `#addToChart` method would be their common interface.  The object that would call the `#addToChart` method on other objects would be interacting with the duck type.
+
+For me the object that would call this method on the duck types would 
