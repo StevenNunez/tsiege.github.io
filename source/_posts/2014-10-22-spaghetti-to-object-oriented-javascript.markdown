@@ -8,6 +8,8 @@ categories: JavaScript JS Object&nbspOriented&nbspProgramming OO OOP D3.js JavaS
 # Introduction
 This post covers how to turn any pile of spaghetti JavaScript into an object oriented composition.  Be it jQuery selectors and listeners, some other JS library, or your own code.  The code I'm using will contain some D3.js, the data visualization library, but you do not need to be familiar with it to take away good design ideas.  I'll make sure to explain any object oriented terms that I use.
 
+I will also be creating JavaScript constructor functions and prototypical methods. If you are unfamiliar with these parts of the language see this post for [more](http://pivotallabs.com/javascript-constructors-prototypes-and-the-new-keyword/).
+
 # The Problem I Faced
 Recently I've been working on a graph feature for [Heat Seek NYC](http://heatseeknyc.com/) that display's a user's temperature readings. The graph, in concept, was straightforward enough, it used D3.js to draw a user's temperature readings sent via AJAX as a JSON.  I hadn't used D3.js before, but there were plenty of tutorials, and sure enough I got a working version.  The problem was that all the tutorials were piles of spaghetti code themselves, so mine was even worse being a customized version.
 
@@ -56,6 +58,18 @@ Another part of this process was moving all variable declarations to the top of 
 # Creating the Duck Type
 A duck type is a substitute for inheritance.  Instead of worrying about if all the objects interacting with one another are of a common class, all we need to be concerned with is whether or not it they share a common interface, i.e. implement the same method(s).
 
-My interface is simple.  All parts of the graphs just need to add themselves to the chart, `#addToChart` method would be their common interface.  The object that would call the `#addToChart` method on other objects would be interacting with the duck type.
+My interface is simple.  All parts of the graphs just need to add themselves to the chart via an `#addToChart` method. The object that would call the `#addToChart` method would only care if they had implented their own version; it does not need to know how each object performs the method, just that it does.
 
-For me the object that would call this method on the duck types would 
+Using the sets of functions I mentioned in the previous section I began creating my constructors, for example the function that created the main SVG became it's a constructor function with all of it's related functions becoming methods on the constructor's prototype.
+
+Once I had all the separate parts of the graph made into constructors with functions attached to the prototype as methods, I could then begin implementing the `#addToMap` method for each prototype.
+
+Once this was set up I began removing the parts of the code that was not necessary for the ChartSVG constructor and moved them into the other constructors' prototypes.
+
+To view this code see this [commit](https://github.com/heatseeknyc/heatseeknyc/commit/de86a6272c99e648f214d82acc509eaa30a86798?diff=split).
+
+
+# Using the Duck Type
+
+
+The
