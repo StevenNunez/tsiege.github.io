@@ -10,7 +10,7 @@ This post covers how to turn any pile of spaghetti JavaScript into an object ori
 
 I will also be creating JavaScript constructor functions and prototypical methods. If you are unfamiliar with these parts of the language see this great [post](http://pivotallabs.com/javascript-constructors-prototypes-and-the-new-keyword/) for clarification.
 
-All of my ideas on Object Oriented Design Patterns I owe to Sandi Metz and here amazing book POODR.  While it's written in ruby it's easy for any developer, including novices, to understand.
+All of my ideas on Object Oriented Design Patterns I owe to Sandi Metz and her amazing book POODR.  While it's written in Ruby it's easy for any developer, including novices, to understand.
 
 # The Problem I Faced
 Recently, I've been working on a graph feature for [Heat Seek NYC](http://heatseeknyc.com/) that display's a user's temperature readings. The graph, in concept, was straightforward enough, it used D3.js to draw a user's temperature readings sent via AJAX as a JSON. I hadn't used D3.js before, but there were plenty of tutorials, and sure enough I got a working version.  The problem was that all the tutorials were piles of spaghetti code themselves, so mine was even worse being a customized version setup by a novice.
@@ -22,7 +22,7 @@ To get a better sense of what I was dealing with checkout the code [here](https:
 # The Solution
 My plan was to create a set of objects to communicate with one another.  How this would work exactly was unclear to me because, looking at the spaghetti code, it was hard for me to determine the discrete parts of the graph. For example, what lines of code were just used to draw the x-axis? Was this code vital to other elements?
 
-The code as it was, was functional programming. A series of functions were called in an exact order, and it _had_ to be that order or the code would break.  However, if I had used an object oriented approach I could have had objects talk to one another via public interfaces (a prototype's methods that I allowed other objects to call).  This would have allowed an object to use it's own private methods as it saw fit and would not require code to in an exact order.
+The code as it was, was functional programming. A series of functions were called in an exact order, and it _had_ to be that order or the code would break.  However, if I had used an object oriented approach I could have had objects talk to one another via public interfaces (a prototype's methods that I allowed other objects to call).  This would have allowed an object to use its own private methods as it saw fit and would not require code to in an exact order.
 
 # Organizing the Spaghetti
 Before I could begin designing my objects and how they interacted I needed to separate all the spaghetti into functions. Doing this helped me get a better sense of the chart's discrete parts; that is, this function was needed only to perform this one action.
@@ -69,7 +69,7 @@ A duck type is a substitute for inheritance.  Instead of worrying about if all t
 
 My interface is simple.  All parts of the graphs just need to add themselves to the chart via an `#addToChart` method. The object that would call the `#addToChart` method would only care if they had implented their own version; it does not need to know how each object performs the method, just that it does.
 
-Using the sets of functions I mentioned in the previous section I began creating my constructors, for example the function that created the main SVG became it's a constructor function with all of it's related functions becoming methods on the constructor's prototype.
+Using the sets of functions I mentioned in the previous section I began creating my constructors, for example the function that created the main SVG became its constructor function with all of its related functions becoming methods on the constructor's prototype.
 
 Once I had all the separate parts of the graph made into constructors with functions attached to the prototype as methods, I could then begin implementing the `#addToMap` method for each prototype.
 
